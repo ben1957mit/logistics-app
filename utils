@@ -1,1 +1,11 @@
+import streamlit as st
 
+def performance_message(productivity):
+    if productivity >= 120:
+        st.success("Outstanding Performance")
+    elif productivity >= 100:
+        st.success("Meets Expectations")
+    elif productivity >= 80:
+        st.warning("Needs Improvement")
+    else:
+        st.error("Unsatisfactory Performance")
