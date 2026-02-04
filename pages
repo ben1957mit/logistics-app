@@ -1,1 +1,12 @@
+import streamlit as st
 
+st.title("Employee Details")
+
+st.write("This page can be expanded later for employee profiles, shift logs, or training records.")
+
+employee_name = st.text_input("Employee Name")
+employee_id = st.text_input("Employee ID")
+shift = st.selectbox("Shift", ["1st", "2nd", "3rd"])
+
+if employee_name and employee_id:
+    st.success(f"Record saved for {employee_name} (ID: {employee_id})")
